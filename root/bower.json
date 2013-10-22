@@ -20,6 +20,7 @@
     "almond": "~0.2.6",
     "handlebars": "~1.0.0",
     "backbone": "~1.1.0",
-    "underscore": "~1.5.2"
+    "underscore": "~1.5.2",
+    "hammerjs": "~1.0.5"
   }
 }
