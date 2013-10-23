@@ -1,4 +1,4 @@
-/*global navigator, document*/
+/*global navigator, document, window*/
 
 require.config({
   paths: {
@@ -35,7 +35,7 @@ require(["app", "jquery"], function(app, $) {
   "use strict";
 
   $(function() {
-    if (navigator.userAgent.match(/(iPhone|iPod|iPad|Android)/)) {
+    if (navigator.userAgent.match(/(iPhone|iPod|iPad|Android)/) && !window.deviceReady) {
       document.addEventListener("deviceready", app.start.bind(app), false);
     } else {
       app.start();

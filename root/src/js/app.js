@@ -4,12 +4,10 @@ define(["backbone", "jquery", "hammer"], function(Backbone, $, hammer) {
 
   return {
     start: function() {
-      $(function() {
-        hammer(document.body).on("swipeleft", function() {
-          window.location.reload();
-        });
-        window.alert("hola!");
+      hammer(document.body).on("swipeleft", function() {
+        window.location.reload();
       });
+      window.alert("Todo listo!");
 
       return [Backbone];
     }

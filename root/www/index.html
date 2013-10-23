@@ -4,7 +4,15 @@
     <title>Index</title>
   </head>
   <body>
-    <script type="text/javascript" src="cordova.js"></script>
-    <script src="js/final.js" type="text/javascript" charset="utf-8"></script>
+    <h1> Hola! </h1>
+
+    <script type="text/javascript">
+      document.addEventListener("deviceready", function() {
+          window.deviceReady = true;
+      }, false);
+    </script>
+
+    <script type="text/javascript" src="phonegap.js"></script>
+    <script data-main="http://192.168.1.39:3000/js/config" src="http://192.168.1.39:3000/bower_components/requirejs/require.js"></script>
   </body>
 </html>

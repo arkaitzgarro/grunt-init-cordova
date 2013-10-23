@@ -101,8 +101,8 @@ module.exports = function(grunt) {
         cordova: ".cordova",
         path: "phonegap",
         plugins: [],
-        platforms: ["android"],
-        verbose: true
+        platforms: ["android", "ios"],
+        verbose: false
       }
     }
   });
