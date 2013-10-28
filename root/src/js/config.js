@@ -1,5 +1,3 @@
-/*global navigator, document, window*/
-
 require.config({
   paths: {
     backbone: "../../bower_components/backbone/backbone",
@@ -31,15 +29,4 @@ require.config({
 });
 
 /* Require the initial module */
-require(["app", "jquery"], function(app, $) {
-  "use strict";
-
-  $(function() {
-    if (navigator.userAgent.match(/(iPhone|iPod|iPad|Android)/) && !window.deviceReady) {
-      document.addEventListener("deviceready", app.start.bind(app), false);
-    } else {
-      app.start();
-    }
-  });
-
-});
+require(["app"], function() { });
