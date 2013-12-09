@@ -120,11 +120,12 @@ module.exports = function(grunt) {
 
   grunt.registerTask("default", ["jshint", "bower", "handlebars", "requirejs", "concat:plain", "clean", "copy"]);
   grunt.registerTask("build", ["jshint", "bower", "handlebars", "requirejs", "concat:ugly", "uglify", "clean", "copy"]);
+  grunt.registerTask("run", ["default", "phonegap:run:android:device"]);
 
   grunt.registerTask("server", function(mode) {
     var connect = require("connect"),
         done = this.async(),
-        dir = (mode === "build") ? "/build" : "/src";
+        dir = (mode === "build") ? "/www" : "/src";
     connect()
       .use(connect.logger("dev"))
       .use(connect.static(__dirname + dir))
